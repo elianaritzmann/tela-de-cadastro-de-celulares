@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(205, 247, 226);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(240, 62, 195);
+}
+
+table, th, td {
+    background-color: rgb(252, 252, 252);
+    border: 1px solid;
+     border-style: dotted;
+    border-color:  rgb(240, 62, 195);
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     color:  rgb(240, 62, 195);
+}
