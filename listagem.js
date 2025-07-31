@@ -1,7 +1,6 @@
    
     const btn = document.getElementById('btn')
     btn.onclick = cadastrar
-
 function cadastrar(){
     const table = document.getElementById('tabela')
     const tabela = document.createElement('tr')
@@ -13,6 +12,8 @@ function cadastrar(){
     const demaisInfo= document.createElement('th')
     const btnExcluir = document.createElement('button')
     btnExcluir.textContent = 'excluir'
+    const alterar = document.createElement('button')
+    alterar.textContent = 'Alterar'
     const acoes  = document.createElement('th')
     const storage = localStorage.getItem('form')
     let objeto = JSON.parse(storage)
@@ -34,11 +35,18 @@ function cadastrar(){
     tabela.appendChild(demaisInfo)
     tabela.appendChild(acoes)
     acoes.appendChild(btnExcluir)
+    acoes.appendChild(alterar)
 
     btnExcluir.onclick=()=>{
         tabela.remove()
         localStorage.clear()
     }
+    
+    alterar.onclick = ()=> {
+        window.location.href = 'index.html'
+    } 
+
+
 
 
 

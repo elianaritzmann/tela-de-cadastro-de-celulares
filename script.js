@@ -6,6 +6,14 @@ const voltar = document.getElementById('voltar');
 
 
 function verificarCampos() {
+  const storage = localStorage.getItem('form')
+  const storageParse= JSON.parse(storage)
+  if(storageParse){
+     inputs.forEach(input=> {
+      input.value = storageParse[input.name]
+      
+     });    
+  }
   let todosPreenchidos = true;
 
   inputs.forEach(input => {
@@ -24,7 +32,6 @@ inputs.forEach(input => {
 
 botao.onclick = () => {
   const selectOpt = select.options[select.selectedIndex].textContent
-  const marca =  'marca'
   const dados = {
     marca : selectOpt
   };
