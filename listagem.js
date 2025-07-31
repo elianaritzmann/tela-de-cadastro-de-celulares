@@ -1,7 +1,20 @@
    
     const btn = document.getElementById('btn')
     btn.onclick = cadastrar
-function cadastrar(){
+    const btnModo = document.getElementById('modo')
+  
+    btnModo.onclick = () => {
+      let modoescuro = document.body.classList.toggle('dark')
+        localStorage.setItem('modo', JSON.stringify(modoescuro));
+    };
+    window.onload=()=>{
+        let tema = localStorage.getItem('modo')
+        if(tema === 'true'){
+            document.body.classList.toggle('dark')
+        }
+    }
+    
+    function cadastrar(){
     const table = document.getElementById('tabela')
     const tabela = document.createElement('tr')
     const marcaOb= document.createElement('th')
